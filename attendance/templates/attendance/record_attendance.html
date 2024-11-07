@@ -1,0 +1,26 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Attendance Page</title>
+    <link rel="stylesheet" href="{% static 'attendance/CSS/record.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Record Attendance</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button   class="button" type="submit">Submit Attendance</button>
+            
+        </form>
+
+    </div>
+  
+
+</body>
+</html>

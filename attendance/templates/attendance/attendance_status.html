@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Status Page</title>
+    <link rel="stylesheet" href="{% static 'attendance/CSS/status.css' %}">
+</head>
+<body>
+    <div class="container">
+    <h2>Attendance Status</h2>
+    <p>Initials: {{ initials }}</p>
+    <p>Date: {{ date }}</p>
+    <p>Attendance Percentage: {{ attendance_percentage }}%</p>
+    {% if eligible %}
+        <p class="eligible">Eligible for End of Semester Exams</p>
+    {% else %}
+        <p class="not-eligible">Not Eligible for End of Semester Exams</p>
+    {% endif %}
+
+</div>
+</body>
+</html>

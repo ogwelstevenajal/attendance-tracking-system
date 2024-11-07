@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'attendance/CSS/style.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Image Section -->
+        <div class="login-image">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp" alt="Login Image" alt="Login Image">
+        </div>
+
+        <!-- Form Section -->
+        <div class="login-form">
+            <h2>Sign into your account</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <button class="button" type="submit">Login</button>
+            </form>
+
+            {% if error %}
+                <p class="error-message">{{ error }}</p>
+            {% endif %}
+
+            <p>Don't have an account?<a href="{% url 'attendance:register' %}">Register here</a></p>
+        </div>
+    </div>
+</body>
+</html>

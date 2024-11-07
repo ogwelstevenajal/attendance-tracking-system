@@ -1,0 +1,73 @@
+/* style.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Header */
+h2 {
+    color: #4a90e2;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Text Styling */
+p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+p strong {
+    color: #333;
+}
+
+/* Eligibility Message */
+p.eligible {
+    color: #4CAF50; /* Green color for eligible */
+    font-weight: bold;
+}
+
+p.not-eligible {
+    color: #E53935; /* Red color for not eligible */
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
